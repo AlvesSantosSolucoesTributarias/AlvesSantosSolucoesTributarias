@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Alves Santos Soluções Tributárias — Serviços de contabilidade, soluções tributárias e apoio empresarial em Itabaiana, Sergipe.">
+    <meta name="author" content="Alves Santos Soluções Tributárias LTDA">
+
+    <title>Alves Santos Soluções Tributárias | Contabilidade</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        :root {
+            --primary: #0b1f3a;
+            --primary-light: #12345c;
+            --secondary: #c9a227;
+            --secondary-light: #e3c35a;
+            --light: #f5f7fa;
+            --dark: #172033;
+            --text: #5f6b7a;
+            --white: #ffffff;
+            --success: #198754;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .navbar {
+            background: rgba(11, 31, 58, 0.97);
+            box-shadow: 0 3px 20px rgba(0,0,0,.08);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: #fff !important;
+            letter-spacing: -.5px;
+        }
+
+        .navbar-brand span {
+            color: var(--secondary-light);
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,.85) !important;
+            font-weight: 500;
+            margin-left: 12px;
+            transition: .3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-light) !important;
+        }
+
+        .btn-gold {
+            background: var(--secondary);
+            border: none;
+            color: #fff;
+            font-weight: 700;
+            padding: 13px 24px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        .btn-gold:hover {
+            background: #a98716;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light-custom {
+            border: 1px solid rgba(255,255,255,.5);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 720px;
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background:
+                linear-gradient(120deg, rgba(7,23,44,.98), rgba(11,31,58,.88)),
+                radial-gradient(circle at top right, #244d7a, transparent 50%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            border: 1px solid rgba(201,162,39,.2);
+            right: -180px;
+            top: 100px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(201,162,39,.15);
+            color: var(--secondary-light);
+            border: 1px solid rgba(201,162,39,.35);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.08;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: var(--secondary-light);
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.75);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 650px;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 18px;
+        }
+
+        .hero-card i {
+            color: var(--secondary-light);
+            font-size: 32px;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        /* SOBRE */
+
+        .about {
+            background: var(--light);
+        }
+
+        .about-box {
+            background: #fff;
+            border-radius: 18px;
+            padding: 35px;
+            height: 100%;
+            box-shadow: 0 10px 35px rgba(20,35,60,.06);
+        }
+
+        .about-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: rgba(201,162,39,.12);
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 22px;
+        }
+
+        /* SERVIÇOS */
+
+        .service-card {
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 16px;
+            border: 1px solid #edf0f4;
+            height: 100%;
+            transition: .35s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(15,35,65,.1);
+            border-color: transparent;
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            background: var(--primary);
+            color: var(--secondary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .service-card p {
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* DIFERENCIAIS */
+
+        .features {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .features h2 {
+            color: #fff;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .feature-item i {
+            color: var(--secondary-light);
+            font-size: 27px;
+        }
+
+        .feature-item h5 {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .feature-item p {
+            color: rgba(255,255,255,.68);
+            margin: 0;
+        }
+
+        /* DADOS */
+
+        .data-card {
+            border: 1px solid #e9edf2;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 35px rgba(20,35,60,.05);
+        }
+
+        .data-header {
+            background: var(--primary);
+            color: #fff;
+            padding: 25px 30px;
+        }
+
+        .data-header h4 {
+            color: #fff;
+            margin: 0;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 17px 25px;
+            border-bottom: 1px solid #eef0f3;
+        }
+
+        .data-row:last-child {
+            border-bottom: none;
+        }
+
+        .data-label {
+            font-weight: 600;
+            color: #697586;
+        }
+
+        .data-value {
+            color: var(--dark);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* STATUS */
+
+        .status-active {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: var(--success);
+        }
+
+        .status-active::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            background: var(--success);
+            border-radius: 50%;
+        }
+
+        /* CTA */
+
+        .cta {
+            background:
+                linear-gradient(120deg, rgba(11,31,58,.98), rgba(18,52,92,.94));
+            color: #fff;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            color: #fff;
+            font-size: 2.7rem;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.7);
+        }
+
+        /* CONTATO */
+
+        .contact-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid #edf0f4;
+            height: 100%;
+            transition: .3s;
+        }
+
+        .contact-card:hover {
+            box-shadow: 0 15px 35px rgba(20,35,60,.08);
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(11,31,58,.08);
+            color: var(--primary);
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .contact-card a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* MAPA */
+
+        .map-container {
+            border-radius: 18px;
+            overflow: hidden;
+            min-height: 360px;
+            background: #e9ecef;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 360px;
+            border: 0;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #071526;
+            color: rgba(255,255,255,.65);
+            padding: 65px 0 25px;
+        }
+
+        footer h5 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,.65);
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: var(--secondary-light);
+        }
+
+        .footer-logo {
+            color: #fff;
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .footer-logo span {
+            color: var(--secondary-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            margin-top: 45px;
+            padding-top: 22px;
+            font-size: 13px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,.2);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 7px;
+            transition: .3s;
+        }
+
+        .social-icon:hover {
+            background: var(--secondary);
+            border-color: var(--secondary);
+            color: #fff;
+        }
+
+        /* WHATSAPP */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 29px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.2);
+            z-index: 999;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            color: #fff;
+        }
+
+        /* RESPONSIVO */
+
+        @media (max-width: 991px) {
+
+            .hero {
+                min-height: auto;
+                padding-top: 130px;
+            }
+
+            .hero-card {
+                margin-top: 50px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .nav-link {
+                margin-left: 0;
+                padding: 12px 0 !important;
+            }
+        }
+
+        @media (max-width: 575px) {
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .data-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .data-value {
+                text-align: left;
+            }
+
+            .cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            Alves Santos <span>Contabilidade</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a class="btn btn-gold"
+                       href="https://wa.me/5579999665678"
+                       target="_blank">
+                        <i class="bi bi-whatsapp me-1"></i>
+                        Fale conosco
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="container position-relative" style="z-index:2">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <div class="hero-badge">
+                    <i class="bi bi-patch-check-fill me-1"></i>
+                    Contabilidade e Soluções Tributárias
+                </div>
+
+                <h1>
+                    Contabilidade que
+                    <span>entende o seu negócio.</span>
+                </h1>
+
+                <p class="mt-4">
+                    Soluções contábeis e tributárias para empresas que
+                    buscam organização, segurança e tranquilidade para
+                    crescer.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+
+                    <a href="#contato" class="btn btn-gold">
+                        Solicitar atendimento
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="#servicos" class="btn btn-outline-light-custom">
+                        Conheça nossos serviços
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="hero-card">
+
+                    <div class="row g-4">
+
+                        <div class="col-6">
+                            <i class="bi bi-calculator"></i>
+                            <h5 class="text-white mt-3">
+                                Contabilidade
+                            </h5>
+                            <small class="text-white-50">
+                                Organização e acompanhamento contábil.
+                            </small>
+                        </div>
+
+                        <div class="col-6">
+                            <i class="bi bi-bar-chart-line"></i>
+                            <h5 class="text-white mt-3">
+                                Estratégia
+                            </h5>
+                            <small class="text-white-50">
+                                Informações para apoiar decisões.
+                            </small>
+                        </div>
+
+                        <div class="col-6">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <h5 class="text-white mt-3">
+                                Tributário
+                            </h5>
+                            <small class="text-white-50">
+                                Apoio nas obrigações fiscais.
+                            </small>
+                        </div>
+
+                        <div class="col-6">
+                            <i class="bi bi-shield-check"></i>
+                            <h5 class="text-white mt-3">
+                                Segurança
+                            </h5>
+                            <small class="text-white-50">
+                                Mais organização para sua empresa.
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section class="about" id="sobre">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Sobre nós
+            </div>
+
+            <h2 class="section-title">
+                Uma parceria para o crescimento da sua empresa
+            </h2>
+
+            <p class="section-description">
+                A Alves Santos Soluções Tributárias atua com atividades
+                de contabilidade, oferecendo suporte para empresas que
+                precisam manter seus processos organizados e suas
+                obrigações em dia.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="about-box">
+
+                    <div class="about-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h4>Experiência empresarial</h4>
+
+                    <p>
+                        Atendimento direcionado às necessidades
+                        contábeis e tributárias das empresas.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="about-box">
+
+                    <div class="about-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Visão estratégica</h4>
+
+                    <p>
+                        Informações contábeis organizadas para ajudar
+                        empresários na gestão do negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="about-box">
+
+                    <div class="about-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h4>Atendimento próximo</h4>
+
+                    <p>
+                        Relacionamento profissional e atendimento
+                        próximo às necessidades de cada cliente.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
+
+<section id="servicos">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Nossos serviços
+            </div>
+
+            <h2 class="section-title">
+                Soluções para sua empresa
+            </h2>
+
+            <p class="section-description">
+                Serviços pensados para contribuir com a organização
+                contábil, fiscal e financeira do seu negócio.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Contabilidade</h4>
+
+                    <p>
+                        Escrituração e acompanhamento das informações
+                        contábeis da empresa, contribuindo para uma
+                        gestão mais organizada.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-receipt"></i>
+                    </div>
+
+                    <h4>Área Fiscal</h4>
+
+                    <p>
+                        Apoio na organização fiscal e acompanhamento
+                        das obrigações relacionadas à atividade
+                        empresarial.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-bank"></i>
+                    </div>
+
+                    <h4>Área Tributária</h4>
+
+                    <p>
+                        Suporte relacionado à rotina tributária e
+                        acompanhamento das responsabilidades fiscais.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-check"></i>
+                    </div>
+
+                    <h4>Obrigações Acessórias</h4>
+
+                    <p>
+                        Organização e acompanhamento das informações
+                        necessárias para o cumprimento das obrigações
+                        empresariais.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-pie-chart"></i>
+                    </div>
+
+                    <h4>Consultoria</h4>
+
+                    <p>
+                        Informações e orientações para auxiliar o
+                        empresário na análise e organização do negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+
+                    <h4>Apoio Empresarial</h4>
+
+                    <p>
+                        Suporte contábil para empresas que buscam
+                        profissionalizar seus processos e sua gestão.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DIFERENCIAIS
+========================= -->
+
+<section class="features">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-5 mb-5 mb-lg-0">
+
+                <div class="section-label">
+                    Por que escolher
+                </div>
+
+                <h2 class="section-title">
+                    Organização, confiança e proximidade.
+                </h2>
+
+                <p class="text-white-50">
+                    Nosso objetivo é tornar a rotina contábil mais
+                    organizada e compreensível para o empresário.
+                </p>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div class="feature-item">
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <div>
+                        <h5>Atendimento personalizado</h5>
+                        <p>
+                            Entendimento das necessidades específicas
+                            de cada empresa.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="feature-item">
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <div>
+                        <h5>Informação organizada</h5>
+                        <p>
+                            Dados contábeis e fiscais organizados para
+                            facilitar o acompanhamento empresarial.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="feature-item">
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <div>
+                        <h5>Compromisso profissional</h5>
+                        <p>
+                            Foco em responsabilidade, transparência e
+                            relacionamento de longo prazo.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="feature-item">
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <div>
+                        <h5>Atuação contábil</h5>
+                        <p>
+                            Empresa registrada e com atividade principal
+                            voltada às atividades de contabilidade.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EMPRESA
+========================= -->
+
+<section id="empresa">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Dados da empresa
+            </div>
+
+            <h2 class="section-title">
+                Alves Santos Soluções Tributárias
+            </h2>
+
+            <p class="section-description">
+                Informações cadastrais e empresariais.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <div class="data-header">
+                        <h4>
+                            <i class="bi bi-building me-2"></i>
+                            Informações de Registro
+                        </h4>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">CNPJ</span>
+                        <span class="data-value">
+                            53.547.837/0001-11
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Razão Social</span>
+                        <span class="data-value">
+                            Alves Santos Soluções Tributárias LTDA
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Nome Fantasia</span>
+                        <span class="data-value">
+                            Alves Santos Soluções Tributárias
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Data de Abertura</span>
+                        <span class="data-value">
+                            18/01/2024
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Porte</span>
+                        <span class="data-value">
+                            Micro Empresa
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Natureza Jurídica</span>
+                        <span class="data-value">
+                            Sociedade Empresária Limitada
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Capital Social</span>
+                        <span class="data-value">
+                            R$ 10.000,00
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Situação</span>
+                        <span class="data-value status-active">
+                            Ativa
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <div class="data-header">
+                        <h4>
+                            <i class="bi bi-file-earmark-text me-2"></i>
+                            Informações Contábeis
+                        </h4>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">CRC</span>
+                        <span class="data-value">
+                            SE-000918/O
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">CNAE Principal</span>
+                        <span class="data-value">
+                            69.20-6-01
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Atividade</span>
+                        <span class="data-value">
+                            Atividades de contabilidade
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Tipo</span>
+                        <span class="data-value">
+                            Matriz
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Opção pelo MEI</span>
+                        <span class="data-value">
+                            Não
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Opção pelo Simples</span>
+                        <span class="data-value">
+                            Sim
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Data do Simples</span>
+                        <span class="data-value">
+                            18/01/2024
+                        </span>
+                    </div>
+
+                    <div class="data-row">
+                        <span class="data-label">Responsável</span>
+                        <span class="data-value">
+                            Alexandre Alves dos Santos
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <h2>
+                    Precisa de apoio contábil?
+                </h2>
+
+                <p class="mb-0">
+                    Entre em contato com a Alves Santos Soluções
+                    Tributárias e converse conosco sobre as necessidades
+                    da sua empresa.
+                </p>
+
+            </div>
+
+            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                <a href="https://wa.me/5579999665678"
+                   target="_blank"
+                   class="btn btn-gold btn-lg">
+
+                    <i class="bi bi-whatsapp me-2"></i>
+                    Falar pelo WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+
+<section id="contato">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Entre em contato
+            </div>
+
+            <h2 class="section-title">
+                Estamos à disposição
+            </h2>
+
+            <p class="section-description">
+                Fale conosco pelos canais abaixo.
+            </p>
+
+        </div>
+
+        <div class="row g-4 mb-5">
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-whatsapp"></i>
+                    </div>
+
+                    <h5>WhatsApp</h5>
+
+                    <p>
+                        Converse diretamente com nossa equipe.
+                    </p>
+
+                    <a href="https://wa.me/5579999665678"
+                       target="_blank">
+
+                        (79) 99966-5678
+                        <i class="bi bi-arrow-up-right ms-1"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+
+                    <h5>E-mail</h5>
+
+                    <p>
+                        Envie sua solicitação por e-mail.
+                    </p>
+
+                    <a href="mailto:nailce@cednetprovenet.digital">
+                        nailce@cednetprovenet.digital
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <h5>Endereço</h5>
+
+                    <p>
+                        Rua General Valadão, 146<br>
+                        Centro — Itabaiana/SE<br>
+                        CEP 49500-256
+                    </p>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+General+Valad%C3%A3o%2C+146%2C+Centro%2C+Itabaiana%2C+SE"
+                       target="_blank">
+
+                        Ver no Google Maps
+                        <i class="bi bi-arrow-up-right ms-1"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="map-container">
+
+            <iframe
+                src="https://www.google.com/maps?q=Rua%20General%20Valad%C3%A3o%20146%2C%20Centro%2C%20Itabaiana%2C%20SE&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <div class="footer-logo mb-3">
+                    Alves Santos <span>Soluções Tributárias</span>
+                </div>
+
+                <p>
+                    Serviços de contabilidade e soluções tributárias
+                    para empresas que buscam organização, segurança
+                    e suporte profissional.
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="https://wa.me/5579999665678"
+                       target="_blank"
+                       class="social-icon">
+
+                        <i class="bi bi-whatsapp"></i>
+
+                    </a>
+
+                    <a href="mailto:nailce@cednetprovenet.digital"
+                       class="social-icon">
+
+                        <i class="bi bi-envelope"></i>
+
+                    </a>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+General+Valad%C3%A3o%2C+146%2C+Centro%2C+Itabaiana%2C+SE"
+                       target="_blank"
+                       class="social-icon">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <h5>Navegação</h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="#inicio">Início</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#sobre">Sobre nós</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#servicos">Serviços</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#empresa">Empresa</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#contato">Contato</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-4">
+
+                <h5>Informações</h5>
+
+                <p class="mb-2">
+                    <i class="bi bi-building me-2"></i>
+                    CNPJ: 53.547.837/0001-11
+                </p>
+
+                <p class="mb-2">
+                    <i class="bi bi-award me-2"></i>
+                    CRC: SE-000918/O
+                </p>
+
+                <p class="mb-2">
+                    <i class="bi bi-geo-alt me-2"></i>
+                    Itabaiana — Sergipe
+                </p>
+
+                <p class="mb-0">
+                    <i class="bi bi-check-circle me-2"></i>
+                    Situação cadastral: Ativa
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom text-center">
+
+            <p class="mb-1">
+                © 2026 Alves Santos Soluções Tributárias LTDA.
+                Todos os direitos reservados.
+            </p>
+
+            <small>
+                CNPJ 53.547.837/0001-11 · Atividades de Contabilidade
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BOTÃO WHATSAPP -->
+
+<a href="https://wa.me/5579999665678"
+   target="_blank"
+   class="whatsapp-float"
+   aria-label="Falar pelo WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
